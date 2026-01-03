@@ -1,4 +1,4 @@
-fdffghhhcfgconst hre = require("hardhat");
+ttfdffghhhcfgconst hre = require("hardhat");
 
 async function main() {
   const Coffee = await hre.ethers.getContractFactory("Coffee");
