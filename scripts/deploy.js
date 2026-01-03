@@ -6,5 +6,5 @@ async function main() {
   await coffee.deployed
   console.log(offee Contract deployed ", coffee.addres
 main().cat
-  console.e
+  conso
   
