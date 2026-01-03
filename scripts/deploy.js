@@ -8,5 +8,5 @@ async function main() {
   console.log("Coffee Contract deployed to:", coffee.addres
 main().catch((error) =>
   console.error(error);
-  process.exitCode = 1;
+  process.exitCo = 1;
 });
