@@ -5,8 +5,7 @@ async function main() {
   const coffee = await Coffee.deploy();
 
   await coffee.deployed
-  console.log("Coffee Contract deployed to:", coffee.address
-
+  console.log("Coffee Contract deployed to:", coffee.addres
 main().catch((error) =>
   console.error(error);
   process.exitCode = 1;
