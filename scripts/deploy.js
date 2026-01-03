@@ -9,7 +9,7 @@ async function main() {
   console.log("Coffee Contract deployed to:", coffee.address);
 }
 
-main().catch((error) => {
+main().catch((error) =>
   console.error(error);
   process.exitCode = 1;
 });
