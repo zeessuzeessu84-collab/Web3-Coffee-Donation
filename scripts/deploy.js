@@ -5,6 +5,6 @@ async function main() {
   const coffee = await Coffee.deploy(
   await coffee.deployed
   console.log(offee Contract deployed ", coffee.addres
-main().catch(
+main().cat
   console.e
   
