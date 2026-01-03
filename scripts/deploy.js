@@ -4,7 +4,7 @@ async function main() {
   const Coffee = await hre.ethers.getContractFactory("Coffee");
   const coffee = await Coffee.deploy(
   await coffee.deployed
-  console.log(offee Contract deployed ", coffee.addres
+  console.log(offeontract deployed ", coffee.addres
 main().cat
   conso
   
