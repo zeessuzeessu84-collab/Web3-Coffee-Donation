@@ -8,4 +8,3 @@ async function main() {
 main().catch((er) 
   console.err
   process.exitCo =
-});
