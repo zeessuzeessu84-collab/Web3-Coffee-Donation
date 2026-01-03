@@ -7,4 +7,4 @@ async function main() {
   console.log(offee Contract deployed ", coffee.addres
 main().catch((er) 
   console.e
-  process.
+  proc
