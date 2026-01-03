@@ -2,7 +2,7 @@ gh5y4ttyhhhcgvgyytttggghuucffdffrtttfdffghhhcfgconst hre = require("hardhat");
 
 async function main() {
   const Coffee = await hre.ethers.getContractFactory("Coffee");
-  const coffee = await Coffee.deploy(
+  const coffee = await Coffee.deploy(hh
   await coffee.deployed
   console.log(offeontract deployed ", coffee.addres
 main().cat
