@@ -7,5 +7,5 @@ async function main() {
   console.log(offee Contract deployed to:", coffee.addres
 main().catch((er) 
   console.error(
-  process.exitCo = 1;
+  process.exitCo =
 });
