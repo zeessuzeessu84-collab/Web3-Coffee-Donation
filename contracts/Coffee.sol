@@ -9,6 +9,9 @@ contract Coffee {
         string name,
         string message
     );
+
+    // @notice Emitted when funds are withdrawn
+    event Withdrawn(address indexed to, uint256 amount);
     
     struct Memo {
         address from;
@@ -38,10 +41,19 @@ contract Coffee {
         emit NewMemo(msg.sender, block.timestamp, _name, _message);
     }
 
-    // Withdraw funds to owner
-    function withdrawTips() public {
-        require(owner.send(address(this).balance));
-    }
+ 
+
+// Fixed with proper checks:
+function withdrawTips() public {
+    require(msg.sender == owner, "Only owner can withdraw");
+    require(address(this).balance > 0, "No funds to withdraw");
+    
+    (bool success, ) = owner.call{value: address(this).balance}("");
+    require(success, "Transfer failed");
+    emit Withdrawn(owner, address(this).balance);
+}
+
+
 
     // Get all memos
     function getMemos() public view returns (Memo[] memory) {
