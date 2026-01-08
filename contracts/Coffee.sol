@@ -19,6 +19,16 @@ contract Coffee {
     
     address payable owner;
     Memo[] memos;
+    bool private _locked; // Adding variable for reentrancy protection
+
+
+    // Added modifier for reentrancy
+    modifier nonReentrant() {
+    require(!_locked, "Reentrant call");
+    _locked = true;
+    _;
+    _locked = false;
+    }
 
     constructor() {
         owner = payable(msg.sender);
@@ -38,8 +48,11 @@ contract Coffee {
         emit NewMemo(msg.sender, block.timestamp, _name, _message);
     }
 
-    // Withdraw funds to owner
-    function withdrawTips() public {
+    
+
+
+    // Withdraw funds to owner and added reentrancy
+    function withdrawTips() public nonReentrant {
         require(owner.send(address(this).balance));
     }
 
